@@ -5,7 +5,8 @@ const fetch = require('node-fetch');
 const userModel = require('./models/user');
 const policyModel = require('./models/policy');
 
-mongoose.connect(process.env.MONGOURL);
+mongoose.connect('mongodb://localhost/axa',
+  { useNewUrlParser: true });
 
 let fetchedUsers, fetchedPolicies;
 
